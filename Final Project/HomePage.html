@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novelty</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .logo {
+            font-size: 50px;
+            font-weight: bold;
+            font-style: italic;
+            color:#ffcc00 ;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background-image: url('https://media.istockphoto.com/id/1411029939/photo/top-view-on-colorful-stacked-books-education-and-learning-concept-background.jpg?s=612x612&w=0&k=20&c=9X5M5RI_aAXvRv4r1OZUSBYSVKx0HK0Sg2dLUN8oQwQ=');
+            background-size: cover;
+            background-position: center;
+
+            color: #0b0000;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #333;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background-color: #e6b800;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .book-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .book-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+
+        .book-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .book-item h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .book-item p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .book-item:hover::after {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .contact-us-section {
+            background-color: #f1f1f1;
+            padding: 30px 10px;
+            text-align: center;
+            margin-top: 50px;
+            clear: both;
+        }
+
+        .contact-us-section h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .contact-us-details p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .contact-us-details a {
+            color: #28a745;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-us-details a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .logo span {
+            /* margin-left: 5px; */
+            font-size: 18px;
+            font-weight: normal;
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Novelty<span>&#8482;</span></div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="Genre.html" target="_blank">Genres</a></li>
+                <li><a href="#">Books</a></li>
+                <li><a href="#">Recommendations</a></li>
+                
+                
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Welcome to Novelty</h1>
+        <p>Discover and share books you love</p>
+        <button>Join Now</button>
+    </div>
+
+    <div class="content">
+        
+        <h2>Popular Books</h2>
+        <div class="book-list">
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/81DN1723hUL.jpg" alt="Book 1">
+                <h3><a href="ReviewFinal.html" >Harry Potter and The Half Blood Prince</a></h3>
+                <p>by J K Rowling</p>
+            </div>
+            <div class="book-item">
+                <img src="https://m.media-amazon.com/images/I/51dRBSBsSNL._AC_UF1000,1000_QL80_.jpg" alt="Book 2">
+                <h3>Higher Engineering Mathematics</h3>
+                <p>by Dr. B.S. Grewal</p>
+            </div>
+            <div class="book-item">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1644605295i/60393672.jpg" alt="Book 3">
+                <h3>It Starts With Us</h3>
+                <p>by Colleen Hoover</p>
+            </div>
+            <div class="book-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR819TtvIV0JJ5_Wzzfcnk3y2eXfPpamZmdbrg5ofv0Ydafpw_f" alt="Book 4">
+                <h3>To Kill A MockingBird</h3>
+                <p>by Harper Lee</p>
+            </div>
+        </div>
+
+        
+        <h2>Best Sellers</h2>
+        <div class="book-list">
+            <div class="book-item">
+                <img src="https://bookspringindia.in/cdn/shop/products/Bsiq_1024x1024@2x.webp?v=1679073176"
+                    alt="Book 5">
+                <h3>Atmoic Habits</h3>
+                <p>by James Clear</p>
+            </div>
+            <div class="book-item">
+                <img src="https://bookspringindia.in/cdn/shop/products/81BE7eeKzAL._AC_UF1000_1000_QL80_FMwebp_1024x1024@2x.webp?v=1679329477"
+                    alt="Book 6">
+                <h3>Rich Dad Poor Dad</h3>
+                <p>by Robert T. Kiyosaki</p>
+            </div>
+            <div class="book-item">
+                <img src="https://i.pinimg.com/474x/38/56/38/385638c4b7a5e9ea43ce56c1d4024489.jpg" alt="Book 7">
+                <h3>A Song Of Ice and Fire</h3>
+                <p>by George RR Martin</p>
+            </div>
+            <div class="book-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd920YO-9ylTP65dXQ5CQd8gw1b6oEIw-gRg&s"
+                    alt="Book 8">
+                <h3>A Brief History Of Time</h3>
+                <p>by Stephan Hawking</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="contact-us-section">
+        <h2>Contact Us</h2>
+        <div class="contact-us-details">
+            <p>If you have any questions or need further information, feel free to contact us.</p>
+            <p><strong>Email:</strong> <a href="ayushsriva2598@gmail.com">ayushsriva2598@gmail.com</a></p>
+            <p><strong>Phone:</strong> +91 8004662598</p>
+            <p><strong>Address:</strong> KIET Group Of Institutions,Ghaziabad, Uttar Pradesh,India</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Book Review Website. All rights reserved.</p>
+    </div>
+</body>
+
+
+</html>

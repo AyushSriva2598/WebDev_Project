@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Genres</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #333;
+            color:  yellow;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: yellow;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .genre-section {
+            margin-bottom: 40px;
+        }
+
+        .genre-title {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .book-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .book-item {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+        }
+
+        .book-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .book-item h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .book-item p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Book Genres</h1>
+    </header>
+
+    <div class="content">
+        <!-- Fiction Genre Section -->
+        <div class="genre-section">
+            <h2 class="genre-title">Fiction</h2>
+            <div class="book-list">
+                <div class="book-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMVhTJCs743cf-s27K5ImdX9GJjhtX_bGas5cNTjiBCsVDghqS"
+                        alt="Book 1">
+                    <h3>The Hunger Games</h3>
+                    <p>by Suzanne Collins</p>
+                </div>
+                <div class="book-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG4DIZ8zeBMCj1s7gRvHEAliiPmGukocfFUr8wElGeM73oZ2SY"
+                        alt="Book 2">
+                    <h3>The Alchemist</h3>
+                    <p>by Paulo Coelho</p>
+                </div>
+                <div class="book-item">
+                    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR0akIiZV1hBrHy7nppCgV2h1rP8jmbw9JFYUbxb0h8GoxnKlv3"
+                        alt="Book 3">
+                    <h3>Gone With The Wind</h3>
+                    <p>Margaret Mitchell</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Non-Fiction Genre Section -->
+        <div class="genre-section">
+            <h2 class="genre-title">Non-Fiction</h2>
+            <div class="book-list">
+                <div class="book-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToEc-eOlgJDDrukGbYfxzg5dQvyCE2_GcJp_GtDBsZVR48rW7n"
+                        alt="Book 4">
+                    <h3>India After Gandhi</h3>
+                    <p>by Ramachandra Guha</p>
+                </div>
+                <div class="book-item">
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1389175338i/10310.jpg"
+                        alt="Book 5">
+                    <h3>The Argumentative Indian</h3>
+                    <p>by Amartya Sen</p>
+                </div>
+                <div class="book-item">
+                    <img src="https://m.media-amazon.com/images/I/91El3d6U5jL._AC_UF1000,1000_QL80_.jpg" alt="Book 6">
+                    <h3>The Legend Of Suheldev</h3>
+                    <p>by Amish Tripathi</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mystery Genre Section -->
+        <div class="genre-section">
+            <h2 class="genre-title">Mystery</h2>
+            <div class="book-list">
+                <div class="book-item">
+                    <img src="https://m.media-amazon.com/images/I/61Qfno5VlTL._SY342_.jpg" alt="Book 7">
+                    <h3>Good Girl,Bad Blood</h3>
+                    <p>by Holly Jackson</p>
+                </div>
+                <div class="book-item">
+                    <img src="https://m.media-amazon.com/images/I/81y9uCHoxrL._SY342_.jpg" alt="Book 8">
+                    <h3>The Silent Patient</h3>
+                    <p>by Alex Michaelides</p>
+                </div>
+                <div class="book-item">
+                    <img src="https://m.media-amazon.com/images/I/41F7rleidTL._SX342_SY445_.jpg" alt="Book 9">
+                    <h3>Sherlock Holmes</h3>
+                    <p>by Sir Arthur Conan Doyle</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bookstore | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>

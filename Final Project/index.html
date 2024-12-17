@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            background-image: url("https://static.vecteezy.com/system/resources/thumbnails/022/965/017/small/spring-background-with-flowers-and-books-banner-poster-template-with-place-for-text-useful-to-use-for-invitations-promotion-sales-offer-vector.jpg");
+            background-size: 100% auto;
+            /* Stretch the image horizontally but keep the vertical size the same */
+            background-position: center;
+            /* Center the background image horizontally */
+            background-repeat: no-repeat;
+            /* Prevent repeating the image */
+            background-attachment: fixed;
+            /* Keeps the background fixed while scrolling */
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-section {
+            flex: 1;
+            display: none;
+            /* Hide this section because the image is now on the body */
+        }
+
+        .signup-section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Slight transparency to make it readable */
+            padding: 20px;
+        }
+
+        .signup-form {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(142, 41, 5, 20);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .signup-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .signup-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .signup-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #efff08;
+            box-shadow: rgba(14, 14, 14, 255);
+            border: none;
+            border-radius: 4px;
+            color: #000000;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .signup-form button:hover {
+            background-color: rgba(14, 14, 14, 255)0;
+        }
+
+        .signup-form p {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+        }
+
+        .signup-form p a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .signup-form p a:hover {
+            text-decoration: underline;
+        }
+
+        .website-name {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 55px;
+            font-style: italic;
+            font-weight: bold;
+            color: #efff08;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 1.5);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .website-name:hover {
+            color: #0056b3;
+            cursor: pointer;
+        }
+
+        .website-name span {
+            /* margin-left: 5px; */
+            font-size: 18px;
+            font-weight: normal;
+            vertical-align: top;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <div class="website-name">Novelty<span>&#8482;</span></div>
+    <div class="container">
+        <div class="image-section"></div>
+        <div class="signup-section">
+            <form class="signup-form">
+                <h2>Create an Account</h2>
+
+                <input type="text" id="name" name="name" placeholder="Full Name">
+                <span id="nameError" class="error"></span><br>
+
+                <input type="email" id="email" name="email" placeholder="Email">
+                <span id="emailError" class="error"></span><br>
+
+                <input type="password" id="password" name="password" placeholder="Password">
+                <span id="passwordError" class="error"></span><br>
+                <button id="submit" type="button" onclick="validateForm()">Submit</button>
+
+                <p>Already have an account? <a href="#">Log in</a></p>
+            </form>
+        </div>
+    </div>
+    <script>
+        function validateForm() {
+            // Clear previous error messages
+            document.getElementById("nameError").textContent = "";
+            document.getElementById("emailError").textContent = "";
+            document.getElementById("passwordError").textContent = "";
+
+
+            let isValid = true;
+
+            // Name validation
+            const name = document.getElementById("name").value.trim();
+            if (name === "") {
+                document.getElementById("nameError").textContent = "Name is required.";
+                isValid = false;
+            }
+
+            // Email validation
+            const email = document.getElementById("email").value.trim();
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (email === "") {
+                document.getElementById("emailError").textContent = "Email is required.";
+                isValid = false;
+            } else if (!emailPattern.test(email)) {
+                document.getElementById("emailError").textContent = "Invalid email format.";
+                isValid = false;
+            }
+
+            // Password validation
+            const password = document.getElementById("password").value.trim();
+            if (password === "") {
+                document.getElementById("passwordError").textContent = "Password is required.";
+                isValid = false;
+            } else if (password.length < 6) {
+                document.getElementById("passwordError").textContent = "Password must be at least 6 characters long.";
+                isValid = false;
+            }
+
+            // If all validations pass
+            if (isValid) {
+                window.location.href = "HomePage.html";
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Review - Book Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Section */
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #ffcc00;
+        }
+
+        /* Layout Container */
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+            background-color: #fff;
+        }
+
+        /* Book Description Section */
+        .book-section {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .book-section .book-img {
+            width: 250px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-right: 30px;
+        }
+
+        .book-details {
+            max-width: 600px;
+        }
+
+        .book-details h2 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .book-details p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .book-details .genre {
+            font-size: 16px;
+            font-weight: bold;
+            color: #777;
+        }
+
+        /* Cart Section */
+        .cart {
+            width: 35%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .cart ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cart ul li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart button {
+            background-color: #ffcc00;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .cart button:hover {
+            background-color: #e6b800;
+        }
+
+        /* Review Section */
+        .review-section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-section h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .review-form input,
+        .review-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .review-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .review-form button:hover {
+            background-color: #218838;
+        }
+
+        .reviews-list {
+            margin-top: 30px;
+        }
+
+        .review-item {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-item h4 {
+            margin-top: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .review-item p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .review-item .review-author {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .stars {
+            font-size: 20px;
+            color: #ffcc00;
+        }
+
+        .stars span {
+            cursor: pointer;
+            margin: 0 3px;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .header span {
+            font-size: 18px;
+            font-weight: normal;
+            vertical-align: top;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Novelty<span>&#8482;</span></h1>
+    </div>
+
+    <!-- Layout Container -->
+    <div class="main-container">
+        <!-- Book Section (Left Side) -->
+        <div class="book-section">
+            <img src="https://m.media-amazon.com/images/I/81DN1723hUL.jpg" alt="Book Cover" class="book-img">
+            <div class="book-details">
+                <h2>Harry Potter And The Half-Blood Prince</h2>
+                <p><span class="genre">Genre:</span> Adventure, Fiction</p>
+                <p><strong>Author:</strong> J.K Rowling</p>
+                <p><strong>Description:</strong> Harry Potter and the Half-Blood Prince follows Harry's sixth year at Hogwarts, where he uncovers Voldemort's dark past through memories. With the help of the mysterious Half-Blood Prince, Harry learns crucial secrets to defeat Voldemort. Meanwhile, personal relationships deepen, and tragedy strikes, setting the stage for an epic final battle.</p>
+            </div>
+        </div>
+
+        <!-- Cart Section (Right Side) -->
+        <div class="cart">
+            <h3>Your Cart</h3>
+            <ul>
+                <li>
+                    <span>Item Cost</span>
+                    <span>&#8377 600</span>
+                </li>
+                <li>
+                    <span>Tax</span>
+                    <span>&#8377 72</span>
+                </li>
+                <li>
+                    <span>Delivery Charge</span>
+                    <span>&#8377 80</span>
+                </li>
+                <li>
+                    <span>Total</span>
+                    <span>&#8377 752</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Review Section (Bottom) -->
+    <div class="review-section">
+        <h3>Leave a Review</h3>
+        <form class="review-form" onsubmit="submitReview(event)">
+            <input type="text" id="reviewerName" placeholder="Your Name" required>
+            <textarea id="reviewText" rows="5" placeholder="Write your review here..." required></textarea>
+
+            <!-- Rating System (Stars out of 5) -->
+            <div class="stars" id="rating">
+                <span onclick="rate(1)">★</span>
+                <span onclick="rate(2)">★</span>
+                <span onclick="rate(3)">★</span>
+                <span onclick="rate(4)">★</span>
+                <span onclick="rate(5)">★</span>
+            </div>
+            <p>Rating: <span id="selectedRating">0</span>/5</p>
+
+            <button type="submit">Submit Review</button>
+        </form>
+
+        <div class="reviews-list">
+            <div id="reviews">
+                <!-- User reviews will appear here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 Book Review Website. All rights reserved.</p>
+    </div>
+
+    <!-- <script>
+        let currentRating = 0;
+
+        // Function to set the rating
+        function rate(stars) {
+            currentRating = stars;
+            const starsElements = document.querySelectorAll('#rating span');
+            starsElements.forEach((star, index) => {
+                if (index < stars) {
+                    star.style.color = '#ffcc00'; // Gold color for selected stars
+                } else {
+                    star.style.color = ''; // Reset color for unselected stars
+                }
+            });
+            document.getElementById('selectedRating').textContent = stars;
+        }
+
+        // Function to submit a review
+        function submitReview(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("reviewerName").value.trim();
+            const reviewText = document.getElementById("reviewText").value.trim();
+
+            if (name && reviewText && currentRating > 0) {
+                // Create a new review element
+                const reviewItem = document.createElement("div");
+                reviewItem.classList.add("review-item");
+
+                const reviewContent = `
+                    <h4>Review by: <span class="review-author">${name}</span> | Rating: ${currentRating}/5</h4>
+                    <p>${reviewText}</p>
+                `;
+                reviewItem.innerHTML = reviewContent;
+
+                // Append the new review to the reviews list
+                const reviewsContainer = document.getElementById("reviews");
+                reviewsContainer.appendChild(reviewItem);
+
+                // Clear the input fields and reset rating
+                document.getElementById("reviewerName").value = "";
+                document.getElementById("reviewText").value = "";
+                rate(0); // Reset rating
+            } else {
+                alert("Please provide a name, review text, and a rating before submitting.");
+            }
+        }
+
+        // Example function to simulate adding a book to the cart
+        function buyBook() {
+            alert("Book added to the cart. Proceed to checkout.");
+        }
+    </script> -->
+</body>
+
+</html>
